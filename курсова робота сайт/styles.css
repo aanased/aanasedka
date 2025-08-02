@@ -1,0 +1,247 @@
+/* CSS VARIABLES — стильна палітра */
+:root {
+    --color-primary: #00bcd4;
+    --color-primary-dark: #008fa1;
+    --color-bg: #f8f9fa;
+    --color-text: #2c3e50;
+    --color-dark: #121212;
+    --color-light: #ffffff;
+    --shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    --radius: 12px;
+    --transition: all 0.3s ease-in-out;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+  
+  /* Header */
+  header {
+    background: linear-gradient(90deg, #003b5b, #006e90);
+    color: var(--color-light);
+    padding: 15px 30px;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .top-bar {
+    font-size: 0.9rem;
+    text-align: right;
+    margin-bottom: 5px;
+    opacity: 0.8;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-weight: 500;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: var(--color-light);
+    transition: var(--transition);
+    position: relative;
+  }
+  
+  .navbar ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    bottom: -4px;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .navbar ul li a:hover::after {
+    width: 100%;
+  }
+  
+  .btn-primary {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: var(--radius);
+    transition: var(--transition);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .btn-primary:hover {
+    background: var(--color-primary-dark);
+    transform: scale(1.05);
+  }
+  
+  /* Hero */
+  .hero {
+    background: url('https://via.placeholder.com/1600x800') center/cover no-repeat;
+    padding: 120px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }
+  
+  .hero h1 {
+    position: relative;
+    z-index: 1;
+    font-size: 3.5rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    animation: fadeUp 1s ease-out;
+  }
+  
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .search-box {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .search-box select,
+  .search-box button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    box-shadow: var(--shadow);
+  }
+  
+  .search-box button {
+    background: var(--color-primary);
+    color: white;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .search-box button:hover {
+    background: var(--color-primary-dark);
+    transform: scale(1.05);
+  }
+  
+  .burger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar ul {
+      display: none;
+      flex-direction: column;
+      background: var(--color-text);
+      position: absolute;
+      right: 10px;
+      top: 60px;
+      width: 200px;
+      border-radius: var(--radius);
+      padding: 1rem;
+      z-index: 1000;
+    }
+  
+    .navbar ul.show {
+      display: flex;
+    }
+  
+    .burger {
+      display: block;
+    }
+  }
+  
+  /* Темна тема */
+  .dark-theme {
+    background-color: var(--color-dark);
+    color: #eee;
+  }
+  
+  .dark-theme header,
+  .dark-theme footer {
+    background-color: #222;
+  }
+  
+  .dark-theme .btn-primary {
+    background-color: #444;
+  }
+  
+  .dark-theme .boat-card,
+  .dark-theme .offer-box {
+    background-color: #1e1e1e;
+    color: #ddd;
+  }
+  
+  /* Неон заголовки */
+  .neon-title {
+    color: #00e6e6;
+    text-shadow: 0 0 5px #00e6e6, 0 0 10px #00bfff, 0 0 20px #00bfff;
+    transition: all 0.3s ease-in-out;
+  }
+  .neon-title:hover {
+    text-shadow: 0 0 10px #1fffff, 0 0 20px #33ccff, 0 0 30px #66ccff;
+  }
+  
+  /* Кнопка скролу вгору */
+  .scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 50%;
+    display: none;
+    background-color: var(--color-primary);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    z-index: 1000;
+  }

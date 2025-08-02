@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AANASED- - prestigious yachts in Zvyagel</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="top-bar">📞 +123 456 789 | ✉️ info@aanasedka.com</div>
+    <nav class="navbar">
+      <div class="logo">AANASED</div>
+      <div class="burger" id="burger">☰</div>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="boats.html">Explore Boats</a></li>
+        <li><a href="about.html">Our Story</a></li>
+        <li><a href="services.html">What We Offer</a></li>
+        <li><a href="blog.html">Insights</a></li>
+        <li><a href="contact.html">Let's Talk</a></li>
+      </ul>
+      <a href="add-listing.html" class="btn-primary">+ Add Your Boat</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" style="background: url('hero.jpg') center/cover no-repeat;">
+    <h1>Chart Your Course in Style & Luxury</h1>
+    <form class="search-box">
+      <select><option>Choose Your Vessel</option></select>
+      <select><option>Pick a Destination</option></select>
+      <select><option>Select Budget Range</option></select>
+      <button type="submit">Find Now</button>
+    </form>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <div class="text">
+      <h2>Unmatched Yacht Experiences Await</h2>
+      <p>Step aboard and discover seamless sea adventures. With Annased, every wave whispers luxury.</p>
+    </div>
+    <div class="image">
+      <img src="about.jpg" alt="Woman on yacht">
+    </div>
+  </section>
+
+  <!-- Fleet Section -->
+  <section class="fleet">
+    <h2>Meet Our Signature Fleet</h2>
+    <div class="boat-grid">
+      <img src="fleet1.jpg" alt="Sleek Yacht">
+      <img src="fleet2.jpg" alt="Modern Sailboat">
+    </div>
+  </section>
+
+  <!-- Offer Section -->
+  <section class="offer">
+    <h3>This Week's Star Deal 🌟</h3>
+    <div class="offer-box">
+      <img src="fleet1.jpg" alt="Exclusive Offer Yacht">
+      <p>Dial +123 456 789 and set sail with 20% off premium charters!</p>
+    </div>
+  </section>
+
+  <!-- Counters Section -->
+  <section class="counters">
+    <div data-count="240">0+ <span>Elite Yachts</span></div>
+    <div data-count="980">0+ <span>Happy Voyagers</span></div>
+    <div data-count="175">0+ <span>Sunset Spots</span></div>
+    <div data-count="630">0+ <span>Private Events Hosted</span></div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <h2>Tailored Experiences for Every Occasion</h2>
+    <div class="carousel">
+      <div>🌅 Sunset Cruises</div>
+      <div>🏢 Executive Charters</div>
+      <div>🎉 Private Celebrations</div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery">
+    <h2>Moments at Sea</h2>
+    <div class="gallery-grid">
+      <img src="gallery1.jpg" alt="Cheers on yacht">
+      <img src="gallery2.jpg" alt="Sailing into sunset">
+    </div>
+  </section>
+
+  <!-- Booking Form -->
+  <section class="booking">
+    <form>
+      <input type="text" placeholder="Your Full Name">
+      <input type="email" placeholder="Email Address">
+      <textarea placeholder="Tell us what you’re looking for..."></textarea>
+      <button type="submit">Book Your Escape</button>
+    </form>
+    <div class="faq">
+      <h3>⛵ Quick FAQs</h3>
+      <p><strong>Q:</strong> How much does it cost?</p>
+      <p><strong>A:</strong> It varies depending on boat size, duration, and amenities. Contact us for custom quotes.</p>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <blockquote>
+      “Aanased turned our anniversary into a storybook fairytale. Can't wait for the next journey!”
+      <cite>- Jane Doe</cite>
+    </blockquote>
+  </section>
+
+  <!-- News -->
+  <section class="news">
+    <h2>From the Helm – Latest News</h2>
+    <div class="news-cards">
+      <div>🌊 Top 5 Coastal Destinations of 2025</div>
+      <div>🛥 Trends in Eco-Luxury Yachting</div>
+      <div>🚢 Behind the Scenes: Aanased's New Fleet</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-columns">
+      <div><strong>NEVICA</strong> — Live the Ocean Dream</div>
+      <div><a href="index.html">Home</a></div>
+      <div><a href="about.html">About Us</a></div>
+      <div><a href="contact.html">Contact</a></div>
+    </div>
+    <p>&copy; <span id="year">2025</span> Aanased — Where the sea meets luxury.</p>
+  </footer>
+
+  <!-- Theme Toggle -->
+  <button id="theme-toggle" class="btn-primary theme-switcher">🌓</button>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
